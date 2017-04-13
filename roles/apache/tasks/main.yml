@@ -52,3 +52,9 @@
     name=httpd
     state=restarted
     enabled=yes
+- name: ssh 設定tool の配置
+  become: yes
+  template: src={{ item.src }} dest={{ item.dest }}
+  with_items:
+    - { src: "createCA.sh", dest:"/root/createCA.sh" }
+    - { src: "create_cert.sh", dest:"/root/create_cert.sh" }
