@@ -56,5 +56,5 @@
   become: yes
   template: src={{ item.src }} dest={{ item.dest }}
   with_items:
-    - { src: "createCA.sh", dest:"/root/createCA.sh" }
-    - { src: "create_cert.sh", dest:"/root/create_cert.sh" }
+    - { src: "createCA.sh", dest: "/root/createCA.sh" }
+    - { src: "create_cert.sh", dest: "/root/create_cert.sh" }

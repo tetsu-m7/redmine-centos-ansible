@@ -183,5 +183,8 @@ ess_cert_id_chain       = no    # Must the ESS cert id chain be included?
 
 EOF
 
+
+echo "00" > /opt/oreoreCA/crlnumber
+
 echo "CSR への署名" 
 openssl ca -config /opt/oreoreCA/openssl.cnf -in oreoreCA/newreq.pem -days 3650 -out oreoreCA/cert.pem  -notext
