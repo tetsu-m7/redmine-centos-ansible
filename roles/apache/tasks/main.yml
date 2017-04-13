@@ -46,12 +46,12 @@
     src=redmine.conf
     dest=/etc/httpd/conf.d/redmine.conf
 
-- name: httpdの再起動
-  become: yes
-  service:
-    name=httpd
-    state=restarted
-    enabled=yes
+#- name: httpdの再起動
+#  become: yes
+#  service:
+#    name=httpd
+#    state=restarted
+#    enabled=yes
 - name: ssh 設定tool の配置
   become: yes
   template: src={{ item.src }} dest={{ item.dest }}
